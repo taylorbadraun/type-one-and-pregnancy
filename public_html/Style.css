@@ -1,7 +1,15 @@
+/*Inputting background Image*/
 body {
     background-image: url("documentation/images/teal-logo.png");
     background-position: center center;
     background-attachment: fixed;
     background-size: contain;
     background-repeat: no-repeat;
+}
+/*Changing navbar button colors*/
+.nav-pills .nav-link.active {
+    background-color: #00ad9a;
+}
+.nav-link {
+    color: #00ad9a;
 }
