@@ -6,6 +6,10 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 }
+/*Changing size of logo*/
+#logo {
+    height: 40px;
+}
 /*Changing navbar button colors*/
 .nav-pills .nav-link.active {
     background-color: #00ad9a;
