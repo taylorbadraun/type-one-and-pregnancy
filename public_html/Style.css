@@ -7,7 +7,7 @@ section {
     background-repeat: no-repeat;
 }
 /*Changing size of logo*/
-#logo {
+#logo, #logo2 {
     height: 40px;
 }
 /*Changing navbar button colors*/
