@@ -17,6 +17,12 @@ section {
 .nav-link {
     color: #00ad9a;
 }
+/*Span in the intro*/
+span {
+    font-size: larger;
+    font-weight: bold;
+    color: #00ad9a;
+}
 /*Cards*/
 .flip-card {
     background-color: transparent;
