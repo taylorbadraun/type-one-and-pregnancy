@@ -21,7 +21,6 @@ section {
 span {
     font-size: larger;
     font-weight: bold;
-    color: #00ad9a;
 }
 /*Cards*/
 .flip-card {
@@ -62,5 +61,5 @@ span {
     transform: rotateY(180deg);
 }
 a {
-    color: #00ad9a;
+    color: white;
 }
