@@ -55,3 +55,6 @@ section {
     color: white;
     transform: rotateY(180deg);
 }
+a {
+    color: #00ad9a;
+}
