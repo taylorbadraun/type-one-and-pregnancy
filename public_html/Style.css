@@ -17,7 +17,41 @@ section {
 .nav-link {
     color: #00ad9a;
 }
-/*ul {*/
-/*    width: 40%;*/
-/*    min-width: 400px;*/
-/*}*/
+/*Cards*/
+.card {
+    background-color: transparent;
+    perspective: 1000px;
+}
+.card-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.card:hover .card-body {
+    transform: rotateY(180deg);
+}
+.flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #6c757d;
+    color: white;
+}
+.flip-card-back {
+    background-color: #6c757d;
+    color: white;
+    transform: rotateY(180deg);
+}
