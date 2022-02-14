@@ -30,6 +30,22 @@ $(document).ready(function (){
                 required: 'A message is required.',
                 maxlength: 'Message is too long.'
             }
+        },
+        submitHandler: (form) => {
+            $('#contact').ajaxSubmit({
+                type: 'POST',
+                url: $('#contact').attr('action'),
+                success: (ajaxOutput) => {
+                    $('#output-area').css('display', '')
+                    $('#output-area').html(ajaxOutput)
+
+                    if ($('.alert-success' >= 1)){
+                        $('#contact')[0].reset()
+                    }
+
+                }
+            })
+
         }
     })
 })
