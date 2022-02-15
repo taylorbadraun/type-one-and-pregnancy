@@ -1,6 +1,5 @@
 import {Application, request, response, Router} from "express";
 import {Request, Response} from "express";
-
 const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
@@ -18,7 +17,11 @@ const validation = [
     check('messageInput', 'A message of 2000 characters or less is required.').trim().escape().isLength({min:1, max:2000})
 ]
 
-const app = express()
+const app: Application = express()
+app.use(morgan('dev'))
+app.use(express.json())
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
 const recaptcha = new Recaptcha(process.env.RECAPTCHA_SITE_KEY, process.env.RECAPTCHA_SECRET_KEY)
 
@@ -32,6 +35,7 @@ const handlePostRequest = (request: Request, response: Response) => {
     response.append('Content-Type', 'text/html')
 // @ts-ignore
     if (request.recaptcha.error){
+        console.log('handlePostRequest worked')
         return response.send(
             `<div class='alert alert-danger' role='alert'><strong>Oh Snap!</strong>There was a Recaptcha error. Please try again.</div>`
         )
@@ -59,8 +63,7 @@ const handlePostRequest = (request: Request, response: Response) => {
         )
 }
 
-app.use(morgan('dev'))
-app.use(express.json())
+
 
 const indexRoute = express.Router()
 

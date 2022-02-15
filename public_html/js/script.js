@@ -32,11 +32,12 @@ $(document).ready(function (){
             }
         },
         submitHandler: (form) => {
+            console.log('is this thing on?')
             $('#contact').ajaxSubmit({
                 type: 'POST',
                 url: $('#contact').attr('action'),
                 success: (ajaxOutput) => {
-                    $('#output-area').css('display', '')
+                    $('#output-area').css('display','')
                     $('#output-area').html(ajaxOutput)
 
                     if ($('.alert-success') >= 1){
