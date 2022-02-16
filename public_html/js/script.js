@@ -40,7 +40,7 @@ $(document).ready(function (){
                     $('#output-area').css('display','')
                     $('#output-area').html(ajaxOutput)
 
-                    if ($('.alert-success') >= 1){
+                    if ($('.alert-success' >= 1)){
                         $('#contact')[0].reset()
                     }
 
